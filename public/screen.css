@@ -8,7 +8,6 @@
   src: url(assets/mk2.ttf);
 }
 
-
 html {
   height: 100%;
 }
@@ -22,11 +21,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.bgimg {}
-
-ul {
-  list-style: none;
-  padding: 0;
+.bgimg {
 }
 
 main {
@@ -43,7 +38,6 @@ h1 {
   text-align: center;
 }
 
-
 h2 {
   font-family: playerFont;
   color: orange;
@@ -51,4 +45,24 @@ h2 {
   text-transform: uppercase;
   font-size: 5rem;
   text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  background: rgb(129, 129, 129);
+  border: solid 4px rgb(255, 196, 0);
+  border-radius: 50px;
+  box-shadow: 7px 7px red;
+}
+
+ul img {
+  width: 80px;
+  margin: 10px;
 }

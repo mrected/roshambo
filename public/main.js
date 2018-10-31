@@ -1,8 +1,8 @@
 const main = () => {
 
-  const playerOneButtons = document.querySelectorAll('.player-one button')
-  const playerTwoButtons = document.querySelectorAll('.player-two button')
-  let playerChoices = ['', '']
+  const playerOneButtons = document.querySelectorAll('.player-one li')
+  const playerTwoButtons = document.querySelectorAll('.player-two li')
+  let playerChoices = []
   let havePlayersChosen = [false, false]
 
   const checkIfGameStatus = () => {
@@ -21,24 +21,24 @@ const main = () => {
 
   const rpsLogic = (playerOneChoice) => {
     let playerTwoChoice = playerChoices[1]
-    if (playerOneChoice === 'Rock') {
-      return playerTwoChoice === 'Scissors' ? 'player one wins' : 'player two wins'
-    } else if (playerOneChoice === 'Paper') {
-      return playerTwoChoice === 'Rock' ? 'player one wins' : 'player two wins'
+    if (playerOneChoice === 'rock') {
+      return playerTwoChoice === 'scissors' ? 'player one wins' : 'player two wins'
+    } else if (playerOneChoice === 'paper') {
+      return playerTwoChoice === 'rock' ? 'player one wins' : 'player two wins'
     } else {
-      return playerTwoChoice === 'Paper' ? 'player one wins' : 'player two wins'
+      return playerTwoChoice === 'paper' ? 'player one wins' : 'player two wins'
     }
   }
 
   const playerOneChooses = (e) => {
-    playerChoices[0] = e.toElement.textContent
+    console.log(playerChoices[0] = e.toElement.alt)
     document.querySelector('.player-one .options').innerHTML = '<p> Player One has chosen </p>'
     havePlayersChosen[0] = true
     checkIfGameStatus()
   }
 
   const playerTwoChooses = (e) => {
-    playerChoices[1] = e.toElement.textContent
+    playerChoices[1] = e.toElement.alt
     document.querySelector('.player-two .options').innerHTML = '<p> Player Two has chosen </p>'
     havePlayersChosen[1] = true
     checkIfGameStatus()
