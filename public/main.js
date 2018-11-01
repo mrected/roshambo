@@ -68,6 +68,7 @@ const main = () => {
   }
 
   addEvents()
+
 }
 
 document.addEventListener('DOMContentLoaded', main)

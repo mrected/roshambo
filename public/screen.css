@@ -126,6 +126,10 @@ ul img {
     text-shadow: 3px 3px #fff;
   }
   .winner-circle p {
+    font-size: 5rem;
+  }
+
+  .winner-circle span {
     font-size: 6rem;
   }
 }
