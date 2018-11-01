@@ -42,7 +42,7 @@ const main = () => {
   }
 
   const playerOneChooses = (e) => {
-    console.log(playerChoices[0] = e.toElement.alt)
+    playerChoices[0] = e.toElement.alt
     document.querySelector('.choose-one').innerHTML = '<p class="has-chosen-one">has chosen</p>'
     document.querySelector('.player-one .options').innerHTML = ''
     havePlayersChosen[0] = true
@@ -57,14 +57,17 @@ const main = () => {
     checkIfGameStatus()
   }
 
-  const playerOneButtonArray = [...playerOneButtons].map(button => {
-    button.addEventListener('click', playerOneChooses)
-  })
+  const addEvents = () => {
+    playerOneButtons.forEach((button) => {
+      button.addEventListener('click', playerOneChooses)
+    })
 
-  const playerTwoButtonArray = [...playerTwoButtons].map(button => {
-    button.addEventListener('click', playerTwoChooses)
-  })
+    playerTwoButtons.forEach((button) => {
+      button.addEventListener('click', playerTwoChooses)
+    })
+  }
 
+  addEvents()
 }
 
 document.addEventListener('DOMContentLoaded', main)
