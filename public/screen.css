@@ -16,17 +16,16 @@ body {
   margin: 0;
   min-height: 100%;
   font: 16px / 1 sans-serif;
+  background-color: #000;
   background-image: url('https://i.gifer.com/2PDF.gif');
-  background-size: 100% 100%;
+  background-size: auto 100%;
   background-repeat: no-repeat;
-}
-
-.bgimg {
+  background-position: center;
 }
 
 main {
-  display: flex;
-  justify-content: space-around;
+  display: block;
+  height: 100%;
 }
 
 h1 {
@@ -34,8 +33,9 @@ h1 {
   color: red;
   text-shadow: 3px 3px blue;
   text-transform: uppercase;
-  font-size: 8rem;
+  font-size: 3.5rem;
   text-align: center;
+  margin: 30px 0;
 }
 
 h2 {
@@ -43,8 +43,29 @@ h2 {
   color: orange;
   text-shadow: 3px 3px yellow;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 2.5rem;
   text-align: center;
+  margin: 0;
+}
+
+section p {
+  text-align: center;
+  font: 2rem playerFont;
+  color: yellow;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.has-chosen-one {
+  color: red;
+  text-shadow: 1px 1px #fff;
+  padding-top: 10px;
+}
+
+.has-chosen-two {
+  color: blue;
+  text-shadow: 1px 1px #fff;
+  padding-top: 10px;
 }
 
 .options {
@@ -56,13 +77,74 @@ ul {
   list-style: none;
   padding: 10px;
   display: flex;
-  background: rgb(129, 129, 129);
+  background: rgb(189, 189, 189);
   border: solid 4px rgb(255, 196, 0);
   border-radius: 50px;
-  box-shadow: 7px 7px red;
+  box-shadow: 0 9px red;
 }
 
 ul img {
-  width: 80px;
+  width: 40px;
   margin: 10px;
+}
+
+.winner-circle {
+  margin-top: 50px;
+}
+
+.winner-circle p {
+  font: 2rem titleFont;
+}
+
+.winner-circle span {
+  font-size: 3rem;
+  text-shadow: 4px 4px red;
+}
+
+@media (min-width: 450px) {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 650px) {
+  h1 {
+    margin-bottom: 200px;
+    font-size: 6.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .has-chosen-one,
+  .has-chosen-two {
+    font-size: 3rem;
+    text-shadow: 3px 3px #fff;
+  }
+  .winner-circle p {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 950px) {
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  ul img {
+    width: 50px;
+    margin: 10px 20px;
+  }
+}
+
+@media (min-width: 1300px) {
+  body {
+    background-size: 100% auto;
+  }
 }
